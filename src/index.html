@@ -61,23 +61,29 @@
 
 
           <div id="content">
-            <form onSubmit="App.createTask(); return false;">
-              <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
-              <input type="submit" hidden="">
+            <form onSubmit="App.createMeme(); return false;">
+              <input id="memeStr" type="text" class="form-control" placeholder="Meme text..." required>
+              <input type="radio" name="memeNo" id="memeIdNo" value="0" required> Hold on. This whole operation was your idea<br>
+              <input type="radio" name="memeNo" value="1" required> I've never seen this man in my life<br>
+              <input type="radio" name="memeNo" value="2"> This is where the fun begins<br>
+              <input type="radio" name="memeNo" value="3"> Perfectly balanced as all things should be<br><br>
+              <input type="submit">
             </form>
 
+            <hr>
 
-            <ul id="taskList" class="list-unstyled">
-              <div class="taskTemplate" class="checkbox" style="display: none">
+            <ul id="memeList" class="list-unstyled">
+              <div class="memeTemplate" class="checkbox" style="display: none">
                 <label>
-                  <input type="checkbox" />
-                  <span class="content">Task content goes here...</span>
+                  <span class="memeString">Meme string goes here...</span>
+                  <span> by </span>
+                  <span class="memeUsername">Meme username goes here...</span><br>
+                  <span> Created on: </span>
+                  <span class="memeTimestamp">Meme timestamp goes here...</span><br>
+                  <span> Meme image: </span>
+                  <span class="memeIdImage">Meme image goes here...</span>
                 </label>
               </div>
-            </ul>
-
-
-            <ul id="completedTaskList" class="list-unstyled">
             </ul>
 
 

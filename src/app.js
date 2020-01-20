@@ -67,7 +67,45 @@ App = {
 
     $('#account').html(App.account)
 
+    await App.renderTasks()
+
     App.setLoading(false)
+  },
+
+  renderTasks: async() => {
+    const memeTotal = await App.memeList.memeTotal()
+    const $memeTemplate = $('.memeTemplate')
+
+    for (var i = 1; i <= memeTotal; i++) {
+      const meme = await App.memeList.memes(i)
+      const memeText = meme[0]
+      const memeId = meme[1].toNumber()
+      const memeUsername = meme[2]
+      const memeTimestamp = meme[3]
+
+      const $newMemeTemplate = $memeTemplate.clone()
+
+      $newMemeTemplate.find('.memeTimestamp').html(memeTimestamp)
+      $newMemeTemplate.find('.memeString').html(memeText)
+      $newMemeTemplate.find('.memeUsername').html(memeUsername)
+      //if (memeId == 0) {
+
+      $newMemeTemplate.find('.memeIdImage').html(memeId)
+      //}
+
+      $('#memeList').append($newMemeTemplate)
+
+      $newMemeTemplate.show()
+    }
+  },
+
+  createMeme: async() => {
+    App.setLoading(true)
+    const string = $('#memeStr').val()
+    const memeIdToEnter = $('#memeIdNo').val()
+    let date = new Date()
+    await App.memeList.createMeme(string, memeIdToEnter, App.account, date.toUTCString())
+    window.location.reload()
   },
 
   setLoading: (boolean) => {
