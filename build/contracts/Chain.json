@@ -1812,12 +1812,12 @@
         }
       },
       "links": {},
-      "address": "0xADC8521060B24e3799E9bf401747FF9eda25F46a",
-      "transactionHash": "0xfcf1bc17883e87046e8e48cc5f7a0d3d602f85e5ab3103a1ab53333384d2d27c"
+      "address": "0xFf2D96ac14f9696945F3b2f80A3c811773aE1a24",
+      "transactionHash": "0x455a72d019f47a6cf28e3ced1663ce09b8aee157ae4977f965c96532ebcb64b9"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-12-11T08:53:05.431Z",
+  "updatedAt": "2020-01-20T00:28:50.989Z",
   "devdoc": {
     "methods": {}
   },
