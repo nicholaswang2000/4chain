@@ -63,8 +63,8 @@
           <div id="content">
             <form onSubmit="App.createMeme(); return false;">
               <input id="memeStr" type="text" class="form-control" placeholder="Meme text..." required>
-              <input type="radio" name="memeNo" id="memeIdNo" value="0" required> Hold on. This whole operation was your idea<br>
-              <input type="radio" name="memeNo" value="1" required> I've never seen this man in my life<br>
+              <input type="radio" id="memeIdNo" name="memeNo" value="0"> Hold on. This whole operation was your idea<br>
+              <input type="radio" name="memeNo" value="1" checked> I've never met this man in my life<br>
               <input type="radio" name="memeNo" value="2"> This is where the fun begins<br>
               <input type="radio" name="memeNo" value="3"> Perfectly balanced as all things should be<br><br>
               <input type="submit">
@@ -75,14 +75,14 @@
             <ul id="memeList" class="list-unstyled">
               <div class="memeTemplate" class="checkbox" style="display: none">
                 <label>
-                  <span class="memeString">Meme string goes here...</span>
-                  <span> by </span>
+                  <span> Submitted by </span>
                   <span class="memeUsername">Meme username goes here...</span><br>
+                  <span class="memeString">Meme string goes here...</span><br>
+                  <span class="memeIdImage"></span><br>
                   <span> Created on: </span>
                   <span class="memeTimestamp">Meme timestamp goes here...</span><br>
-                  <span> Meme image: </span>
-                  <span class="memeIdImage">Meme image goes here...</span>
                 </label>
+                <hr>
               </div>
             </ul>
 

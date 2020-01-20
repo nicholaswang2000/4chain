@@ -88,10 +88,15 @@ App = {
       $newMemeTemplate.find('.memeTimestamp').html(memeTimestamp)
       $newMemeTemplate.find('.memeString').html(memeText)
       $newMemeTemplate.find('.memeUsername').html(memeUsername)
-      //if (memeId == 0) {
-
-      $newMemeTemplate.find('.memeIdImage').html(memeId)
-      //}
+      if (memeId == 0) {
+        $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/operation.jpg" />')
+      } else if (memeId == 1) {
+        $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/never_met.jpg" />')
+      } else if (memeId == 2) {
+        $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/fun_begins.jpg" />')
+      } else if (memeId == 3) {
+        $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/balanced.jpg" />')
+      }
 
       $('#memeList').append($newMemeTemplate)
 
@@ -102,7 +107,8 @@ App = {
   createMeme: async() => {
     App.setLoading(true)
     const string = $('#memeStr').val()
-    const memeIdToEnter = $('#memeIdNo').val()
+    const memeIdToEnter = $('input[name="memeNo"]:checked').val();
+    //const memeIdToEnter = 0;
     let date = new Date()
     await App.memeList.createMeme(string, memeIdToEnter, App.account, date.toUTCString())
     window.location.reload()
