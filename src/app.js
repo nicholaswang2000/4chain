@@ -67,12 +67,12 @@ App = {
 
     $('#account').html(App.account)
 
-    await App.renderTasks()
+    await App.renderMemes()
 
     App.setLoading(false)
   },
 
-  renderTasks: async() => {
+  renderMemes: async() => {
     const memeTotal = await App.memeList.memeTotal()
     const $memeTemplate = $('.memeTemplate')
 
