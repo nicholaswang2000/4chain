@@ -91,11 +91,11 @@ App = {
       if (memeId == 0) {
         $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/operation.jpg" />')
       } else if (memeId == 1) {
-        $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/never_met.jpg" />')
+        $newMemeTemplate.find('.memeIdImage').prepend('<img id="never_met" src="/images/never_met.jpg" />')
       } else if (memeId == 2) {
-        $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/fun_begins.jpg" />')
+        $newMemeTemplate.find('.memeIdImage').prepend('<img id="fun_begins" src="/images/fun_begins.jpg" />')
       } else if (memeId == 3) {
-        $newMemeTemplate.find('.memeIdImage').prepend('<img id="operation" src="/images/balanced.jpg" />')
+        $newMemeTemplate.find('.memeIdImage').prepend('<img id="balanced" src="/images/balanced.jpg" />')
       }
 
       $('#memeList').append($newMemeTemplate)
